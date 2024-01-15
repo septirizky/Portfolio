@@ -1,0 +1,83 @@
+.flexbox-tech {
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 80px;
+  animation: fadeIn 1s 1.7s backwards;
+  animation-fill-mode: forwards;
+}
+
+.content-tech {
+  width: 30%;
+  padding: 50px 10px;
+  justify-content: center;
+}
+
+.cubespinner {
+  justify-content: center;
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: center;
+
+  div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px lightyellow;
+  }
+
+  .face1 {
+    transform: translateZ(75px);
+  }
+  .face2 {
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(75px);
+  }
+  .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(75px);
+  }
+  .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(75px);
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}
