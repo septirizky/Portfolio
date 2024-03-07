@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Bootstrap from '../../assets/images/bootstrap.png'
 import Axios from '../../assets/images/axios.png'
+import Angular from '../../assets/images/angular.png'
 import React from '../../assets/images/reactjs.png'
 import Next from '../../assets/images/nextjs.png'
 import Redux from '../../assets/images/redux.png'
@@ -8,9 +9,8 @@ import Tailwind from '../../assets/images/tailwind.png'
 import Javascript from '../../assets/images/javascript.png'
 import Typescript from '../../assets/images/typescript.png'
 import NodeJs from '../../assets/images/nodejs.png'
-import ViteJs from '../../assets/images/vitejs.png'
 import Express from '../../assets/images/express-js.png'
-import Sequelize from '../../assets/images/sequelize.png'
+import NestJs from '../../assets/images/nestjs.png'
 import Html from '../../assets/images/html.png'
 import Css from '../../assets/images/css.png'
 import Git from '../../assets/images/git.png'
@@ -53,7 +53,7 @@ const Tech = () => {
               </div>
               <div className="face2">
                 <div className="logo">
-                  <img src={Axios} alt="axios" />
+                  <img src={Angular} alt="angular" />
                 </div>
               </div>
               <div className="face3">
@@ -97,7 +97,7 @@ const Tech = () => {
               </div>
               <div className="face4">
                 <div className="logo">
-                  <img src={ViteJs} alt="ViteJs" />
+                  <img src={Axios} alt="Axios" />
                 </div>
               </div>
               <div className="face5">
@@ -107,7 +107,7 @@ const Tech = () => {
               </div>
               <div className="face6">
                 <div className="logo">
-                  <img src={Sequelize} alt="Sequelize" />
+                  <img src={NestJs} alt="NestJs" />
                 </div>
               </div>
             </div>

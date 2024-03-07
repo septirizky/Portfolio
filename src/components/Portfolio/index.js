@@ -4,7 +4,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import S1 from '../../assets/images/Graha.png'
 import S2 from '../../assets/images/Realta.png'
-import S3 from '../../assets/images/Aditi.png'
+import S3 from '../../assets/images/SepThreads.png'
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -46,7 +46,10 @@ const Portfolio = () => {
                 This website is used to assist realta hotels in the room booking
                 process
               </p>
-              <p>#react #bootstrap #express #multer</p>
+              <p>
+                #postgresql #nodejs #express #multer #react #bootstrap5
+                #reactbootstrap
+              </p>
               <a href="#">
                 <i className="bx bx-lunk-external"></i>
               </a>
@@ -55,12 +58,13 @@ const Portfolio = () => {
           <div className="content-portfolio">
             <img src={S3} alt="Logo3" />
             <div className="layer">
-              <h2>PT Aditi Multi Karya</h2>
+              <h2>Threads CLone</h2>
               <p>
-                The website contains advertising company profiles to attract
-                customers
+                Clone of Threads by Meta providing effortless posts,
+                notification, communities,suggestion, and content discovery for
+                a captivating social networking experience
               </p>
-              <p>#vitejs #tailwind</p>
+              <p>#postgresql #nestjs #angular #multer #tailwind #hyperui</p>
               <a href="#">
                 <i className="bx bx-lunk-external"></i>
               </a>
