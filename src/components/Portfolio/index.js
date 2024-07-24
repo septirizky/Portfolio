@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import S1 from '../../assets/images/Graha.png'
+import S1 from '../../assets/images/Aditi.png'
 import S2 from '../../assets/images/Realta.png'
-import S3 from '../../assets/images/SepThreads.png'
+import S3 from '../../assets/images/Quote.png'
+import S4 from '../../assets/images/MitraMix.png'
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -30,10 +31,10 @@ const Portfolio = () => {
           <div className="content-portfolio">
             <img src={S1} alt="Logo1" />
             <div className="layer">
-              <h2>Graha Garage</h2>
-              <p>Website used to sell vehicle spare parts.</p>
-              <p>#react #materialize</p>
-              <a href="#">
+              <h2>Aditi Engineering</h2>
+              <p>Company profile website for business truck modification</p>
+              <p>#ReactJS #Typescript #NextJs #Tailwind #Daisyui</p>
+              <a href="https://aditi-engineering.vercel.app/">
                 <i className="bx bx-lunk-external"></i>
               </a>
             </div>
@@ -46,10 +47,7 @@ const Portfolio = () => {
                 This website is used to assist realta hotels in the room booking
                 process
               </p>
-              <p>
-                #postgresql #nodejs #express #multer #react #bootstrap5
-                #reactbootstrap
-              </p>
+              <p>#Postgresql #ExpressJs #Sequelize #Multer #React #Bootstrap</p>
               <a href="#">
                 <i className="bx bx-lunk-external"></i>
               </a>
@@ -58,14 +56,24 @@ const Portfolio = () => {
           <div className="content-portfolio">
             <img src={S3} alt="Logo3" />
             <div className="layer">
-              <h2>Threads CLone</h2>
+              <h2>Random Quote Generator</h2>
               <p>
-                Clone of Threads by Meta providing effortless posts,
-                notification, communities,suggestion, and content discovery for
-                a captivating social networking experience
+                Our Random Quote Generator is a simple yet powerful tool
+                designed to inspire, motivate, and entertain.
               </p>
-              <p>#postgresql #nestjs #angular #multer #tailwind #hyperui</p>
-              <a href="#">
+              <p>#Third-party APIs #ReactJs #MaterialUI</p>
+              <a href="https://septi-random-quote.vercel.app/">
+                <i className="bx bx-lunk-external"></i>
+              </a>
+            </div>
+          </div>
+          <div className="content-portfolio">
+            <img src={S4} alt="Logo4" />
+            <div className="layer">
+              <h2>MITRAMIX</h2>
+              <p>Company profile website for ready mix supplier.</p>
+              <p>#ReactJS #Typescript #NextJs #Tailwind #Daisyui</p>
+              <a href="https://septi-random-quote.vercel.app/">
                 <i className="bx bx-lunk-external"></i>
               </a>
             </div>
