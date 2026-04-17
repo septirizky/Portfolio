@@ -1,0 +1,37 @@
+.brand-loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: fadeOut 0.8s 1s forwards;
+}
+
+.brand-loader__name {
+  color: #ffd700;
+  font-family: 'Coolvetica', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(255, 215, 0, 0.18);
+  animation: brandPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes brandPulse {
+  from {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}

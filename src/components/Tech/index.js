@@ -1,25 +1,81 @@
 import { useEffect, useState } from 'react'
 import Bootstrap from '../../assets/images/bootstrap.png'
-import Axios from '../../assets/images/axios.png'
 import Angular from '../../assets/images/angular.png'
-import React from '../../assets/images/reactjs.png'
+import ReactLogo from '../../assets/images/reactjs.png'
 import Next from '../../assets/images/nextjs.png'
 import Redux from '../../assets/images/redux.png'
 import Tailwind from '../../assets/images/tailwind.png'
+import Flutter from '../../assets/images/flutter.png'
 import Javascript from '../../assets/images/javascript.png'
 import Typescript from '../../assets/images/typescript.png'
+import Python from '../../assets/images/python.png'
+import Dart from '../../assets/images/dart.png'
+import Java from '../../assets/images/java.png'
 import NodeJs from '../../assets/images/nodejs.png'
 import Express from '../../assets/images/express-js.png'
 import NestJs from '../../assets/images/nestjs.png'
+import Flask from '../../assets/images/flask.png'
+import FastAPI from '../../assets/images/fastapi.png'
 import Html from '../../assets/images/html.png'
 import Css from '../../assets/images/css.png'
 import Git from '../../assets/images/git.png'
 import Postgre from '../../assets/images/postgresql.png'
 import MongoDb from '../../assets/images/mongodb.png'
-import Multer from '../../assets/images/multer.png'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import BrandLoader from '../BrandLoader'
 import './index.scss'
+
+const techGroups = [
+  {
+    title: 'Languages',
+    description: 'Programming languages I commonly use across my projects.',
+    items: [
+      { name: 'JavaScript', image: Javascript },
+      { name: 'TypeScript', image: Typescript },
+      { name: 'Python', image: Python },
+      { name: 'Dart', image: Dart },
+      { name: 'Java', image: Java },
+    ],
+  },
+  {
+    title: 'Frontend',
+    description:
+      'Responsive interfaces and modern user-facing web experiences.',
+    items: [
+      { name: 'React', image: ReactLogo },
+      { name: 'Next.js', image: Next },
+      { name: 'Flutter', image: Flutter },
+      { name: 'Angular', image: Angular },
+      { name: 'Redux', image: Redux },
+      { name: 'Tailwind CSS', image: Tailwind },
+      { name: 'Bootstrap', image: Bootstrap },
+    ],
+  },
+  {
+    title: 'Backend',
+    description:
+      'APIs, integrations, and application logic for production workflows.',
+    items: [
+      { name: 'Node.js', image: NodeJs },
+      { name: 'Express', image: Express },
+      { name: 'NestJS', image: NestJs },
+      { name: 'Flask', image: Flask },
+      { name: 'FastAPI', image: FastAPI },
+    ],
+  },
+  {
+    title: 'Database & Tools',
+    description:
+      'Core tools I use to support fullstack development and delivery.',
+    items: [
+      { name: 'PostgreSQL', image: Postgre },
+      { name: 'MongoDB', image: MongoDb },
+      { name: 'Git', image: Git },
+      { name: 'HTML', image: Html },
+      { name: 'CSS', image: Css },
+    ],
+  },
+]
 
 const Tech = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -27,128 +83,55 @@ const Tech = () => {
   const aboutArray = ['T', 'e', 'c', 'h', 'n', 'o', 'l', 'o', 'g', 'y']
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
+
+    return () => clearTimeout(timer)
   }, [])
+
   return (
     <>
       <div className="container tech-page">
-        <div className="text">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={aboutArray}
-              idx={15}
-            />
-          </h1>
-        </div>
-        <div className="flexbox-tech">
-          <div className="content-tech">
-            <div className="cubespinner">
-              <div className="face1">
-                <div className="logo">
-                  <img src={Bootstrap} alt="bootstrap" />
-                </div>
-              </div>
-              <div className="face2">
-                <div className="logo">
-                  <img src={Angular} alt="angular" />
-                </div>
-              </div>
-              <div className="face3">
-                <div className="logo">
-                  <img src={React} alt="react" />
-                </div>
-              </div>
-              <div className="face4">
-                <div className="logo">
-                  <img src={Next} alt="nextJs" />
-                </div>
-              </div>
-              <div className="face5">
-                <div className="logo">
-                  <img src={Redux} alt="Redux" />
-                </div>
-              </div>
-              <div className="face6">
-                <div className="logo">
-                  <img src={Tailwind} alt="Tailwind" />
-                </div>
-              </div>
-            </div>
+        <div className="tech-shell">
+          <div className="tech-header">
+            <h1>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={aboutArray}
+                idx={15}
+              />
+            </h1>
+            <p>
+              A selection of technologies I use across frontend, backend, and
+              fullstack development.
+            </p>
           </div>
-          <div className="content-tech">
-            <div className="cubespinner">
-              <div className="face1">
-                <div className="logo">
-                  <img src={Javascript} alt="Javascript" />
+
+          <div className="tech-groups">
+            {techGroups.map((group) => (
+              <section className="tech-group-card" key={group.title}>
+                <div className="tech-group-copy">
+                  <h2>{group.title}</h2>
+                  <p>{group.description}</p>
                 </div>
-              </div>
-              <div className="face2">
-                <div className="logo">
-                  <img src={Typescript} alt="Typescript" />
+
+                <div className="tech-icon-grid">
+                  {group.items.map((item) => (
+                    <div className="tech-icon-card" key={item.name}>
+                      <div className="tech-icon-frame">
+                        <img src={item.image} alt={item.name} />
+                      </div>
+                      <span>{item.name}</span>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="face3">
-                <div className="logo">
-                  <img src={NodeJs} alt="NodeJs" />
-                </div>
-              </div>
-              <div className="face4">
-                <div className="logo">
-                  <img src={Axios} alt="Axios" />
-                </div>
-              </div>
-              <div className="face5">
-                <div className="logo">
-                  <img src={Express} alt="Express" />
-                </div>
-              </div>
-              <div className="face6">
-                <div className="logo">
-                  <img src={NestJs} alt="NestJs" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="content-tech">
-            <div className="cubespinner">
-              <div className="face1">
-                <div className="logo">
-                  <img src={Html} alt="Html" />
-                </div>
-              </div>
-              <div className="face2">
-                <div className="logo">
-                  <img src={Css} alt="Css" />
-                </div>
-              </div>
-              <div className="face3">
-                <div className="logo">
-                  <img src={Git} alt="Git" />
-                </div>
-              </div>
-              <div className="face4">
-                <div className="logo">
-                  <img src={Postgre} alt="Postgre" />
-                </div>
-              </div>
-              <div className="face5">
-                <div className="logo">
-                  <img src={MongoDb} alt="MongoDb" />
-                </div>
-              </div>
-              <div className="face6">
-                <div className="logo">
-                  <img src={Multer} alt="Multer" />
-                </div>
-              </div>
-            </div>
+              </section>
+            ))}
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <BrandLoader />
     </>
   )
 }

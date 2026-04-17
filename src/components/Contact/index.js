@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import AnimatedLetters from '../AnimatedLetters'
+import BrandLoader from '../BrandLoader'
 import './index.scss'
 
 const Contact = () => {
@@ -80,13 +80,10 @@ const Contact = () => {
         <div className="map-wrap">
           <MapContainer center={[-6.23816, 106.664911]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[-6.23816, 106.664911]}>
-              <Popup>Septi lives here</Popup>
-            </Marker>
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
+      <BrandLoader />
     </>
   )
 }
