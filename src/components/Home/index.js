@@ -10,28 +10,8 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   const nameArray = ['e', 'p', 't', 'i', ' ', 'R', 'i', 'z', 'k', 'y']
-  const jobArray = [
-    'F',
-    'u',
-    'l',
-    'l',
-    's',
-    't',
-    'a',
-    'c',
-    'k',
-    ' ',
-    'D',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
+  const fullstackArray = ['F', 'u', 'l', 'l', 's', 't', 'a', 'c', 'k']
+  const developerArray = ['D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.']
 
   useEffect(() => {
     return setTimeout(() => {
@@ -58,11 +38,23 @@ const Home = () => {
                 idx={15}
               />
               <br />
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={jobArray}
-                idx={22}
-              />
+              <span className="job-line">
+                <span className="job-word">
+                  <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={fullstackArray}
+                    idx={22}
+                  />
+                </span>
+                <span className="job-space"> </span>
+                <span className="job-word">
+                  <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={developerArray}
+                    idx={31}
+                  />
+                </span>
+              </span>
             </h1>
             <h2>
               Building fullstack applications with a focus on clean UI, smooth

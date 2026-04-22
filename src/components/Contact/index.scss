@@ -1,4 +1,11 @@
 .contact-page {
+  position: relative;
+  top: auto;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 56px 32px 72px;
   box-sizing: border-box;
   overflow-x: hidden;
@@ -6,23 +13,25 @@
 }
 
 .contact-shell {
-  width: min(1120px, 100%);
+  width: min(860px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   align-items: start;
 }
 
 .contact-intro {
   animation: fadeIn 1s 1.2s backwards;
+  text-align: center;
 
   h1 {
     margin-bottom: 18px;
   }
 
   p {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 760px;
     color: #d6e5ec;
     font-size: 1.65rem;
     line-height: 1.8;
@@ -51,6 +60,7 @@
 .contact-info-row {
   display: grid;
   gap: 6px;
+  text-align: center;
 
   span {
     color: #ffd700;
@@ -145,11 +155,13 @@
 
 @media screen and (max-width: 1060px) {
   .contact-page {
+    min-height: auto;
+    display: block;
     padding: 28px 20px 56px;
   }
 
   .contact-shell {
-    grid-template-columns: 1fr;
+    width: min(860px, 100%);
   }
 
   .contact-intro p {
